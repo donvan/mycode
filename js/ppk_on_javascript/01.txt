@@ -1,0 +1,22 @@
+严格的同源策略:两个窗口的页面的Web域名必须相同，才允许跨窗口通信。
+如： www.quirksmode.org 和 search.quirksmode.org
+缓和： 给两个窗口设置属性 document.domain = 'quirksmode.org';
+当然，只能将document.domain设置为真实域名的一部分。 
+如上面设置为  document.domain = 'microsoft.com';  是无效的。
+
+
+无侵入脚本：
+1.可用的，给网站带来明确的可用性好处
+2.可访问的，如果js失效了，网页依然可阅读和可理解
+3.容易实现，只要在页面中引入脚本本身和一个js钩子(hook)
+4. 应该是分离的，只存在于自己的.js文件中。
+
+
+一个页面由如下三个层组成： HTML表现层、CSS表现层、javascript行为层
+
+
+
+
+
+
+
